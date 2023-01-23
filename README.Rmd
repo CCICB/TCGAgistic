@@ -1,3 +1,4 @@
+
 ---
 output: github_document
 ---
@@ -20,37 +21,46 @@ knitr::opts_chunk$set(
 [![CRAN status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project.org/package=TCGAgistic)
 <!-- badges: end -->
 
-The goal of TCGAgistic is to ...
+The goal of TCGAgistic is to easily load gistic copy-number analysis for TCGA cohorts into R
 
 ## Installation
 
 You can install the development version of TCGAgistic like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("remotes")
+remotes::install_github('CCICB/TCGAgistic')
 ```
 
-## Example
+## Quick Start
 
-This is a basic example which shows you how to solve a common problem:
 
+### View available datasets
 ```{r example}
 library(TCGAgistic)
-## basic example code
+
+# Check available datasets
+tcga_gistic_available()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
+### Load Datasets
+
+Load the GISTIC dataset and visualise results
+
+```{r}
+library(TCGAgistic)
+library(maftools)
+
+# Load dataset
+gistic <- tcga_gistic_load("ACC", source = "Firehose", cnLevel = "all")
+
+# Visualise results
+gisticChromPlot(gistic)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
 
-You can also embed plots, for example:
+## How it works
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+TCGAgistic streams `rds` files from github, located in the [TCGAgisticDB](https://github.com/CCICB/TCGAgisticDB) package, into your local R session
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
