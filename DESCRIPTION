@@ -17,3 +17,5 @@ Imports:
     maftools,
     pingr,
     rlang
+URL: https://github.com/CCICB/TCGAgistic
+BugReports: https://github.com/CCICB/TCGAgistic/issues
