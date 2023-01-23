@@ -9,6 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project.org/package=TCGAgistic)
+[![R-CMD-check](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of TCGAgistic is to easily load gistic copy-number analysis for
