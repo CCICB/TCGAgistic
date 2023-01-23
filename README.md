@@ -9,7 +9,6 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project.org/package=TCGAgistic)
-[![R-CMD-check](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of TCGAgistic is to easily load gistic copy-number analysis for
@@ -26,7 +25,24 @@ remotes::install_github('CCICB/TCGAgistic')
 
 ## Quick Start
 
-### View available datasets
+### Visualising TCGA copy number alterations
+
+Load the GISTIC dataset and visualise results
+
+``` r
+library(TCGAgistic)
+library(maftools)
+
+# Load dataset
+gistic <- tcga_gistic_load("ACC", source = "Firehose", cnLevel = "all")
+
+# Visualise results
+gisticChromPlot(gistic)
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+### List all available datasets
 
 ``` r
 library(TCGAgistic)
@@ -256,23 +272,6 @@ tcga_gistic_available()
 #> 109            deep         UVM_Firehose.cnlevel_deep.rds 10.7908/C1TX3DWK
 #> 110         shallow      UVM_Firehose.cnlevel_shallow.rds 10.7908/C1TX3DWK
 ```
-
-### Load Datasets
-
-Load the GISTIC dataset and visualise results
-
-``` r
-library(TCGAgistic)
-library(maftools)
-
-# Load dataset
-gistic <- tcga_gistic_load("ACC", source = "Firehose", cnLevel = "all")
-
-# Visualise results
-gisticChromPlot(gistic)
-```
-
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 ## How it works
 

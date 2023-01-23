@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project.org/package=TCGAgistic)
-[![R-CMD-check](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of TCGAgistic is to easily load gistic copy-number analysis for TCGA cohorts into R
@@ -36,16 +35,7 @@ remotes::install_github('CCICB/TCGAgistic')
 ## Quick Start
 
 
-### View available datasets
-```{r example}
-library(TCGAgistic)
-
-# Check available datasets
-tcga_gistic_available()
-```
-
-
-### Load Datasets
+### Visualising TCGA copy number alterations
 
 Load the GISTIC dataset and visualise results
 
@@ -58,6 +48,14 @@ gistic <- tcga_gistic_load("ACC", source = "Firehose", cnLevel = "all")
 
 # Visualise results
 gisticChromPlot(gistic)
+```
+
+### List all available datasets
+```{r example}
+library(TCGAgistic)
+
+# Check available datasets
+tcga_gistic_available()
 ```
 
 
