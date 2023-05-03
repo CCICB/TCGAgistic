@@ -10,6 +10,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![CRAN
 status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project.org/package=TCGAgistic)
 [![R-CMD-check](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml)
+[![r-universe status
+badge](https://CCICB.r-universe.dev/badges/TCGAgistic)](https://CCICB.r-universe.dev/ui#package:TCGAgistic)
 <!-- badges: end -->
 
 The goal of TCGAgistic is to easily load gistic copy-number analysis for
@@ -17,7 +19,14 @@ TCGA cohorts into R
 
 ## Installation
 
-You can install the development version of TCGAgistic like so:
+Install TCGAgistic from R universe like so:
+
+``` r
+# Install TCGAgistic from R:
+install.packages('TCGAgistic', repos = c('https://ccicb.r-universe.dev', 'https://cloud.r-project.org'))
+```
+
+Or you can install the development version from github like so:
 
 ``` r
 # install.packages("remotes")
