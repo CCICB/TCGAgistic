@@ -19,14 +19,14 @@ TCGA cohorts into R
 
 ## Installation
 
-Install TCGAgistic from R universe like so:
+Install TCGAgistic from R universe:
 
 ``` r
 # Install TCGAgistic from R:
 install.packages('TCGAgistic', repos = c('https://ccicb.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
-Or you can install the development version from github like so:
+Alternatively, you can install the development version from github:
 
 ``` r
 # install.packages("remotes")
