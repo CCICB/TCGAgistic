@@ -12,6 +12,7 @@ status](https://www.r-pkg.org/badges/version/TCGAgistic)](https://CRAN.R-project
 [![R-CMD-check](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/CCICB/TCGAgistic/actions/workflows/R-CMD-check.yaml)
 [![r-universe status
 badge](https://CCICB.r-universe.dev/badges/TCGAgistic)](https://CCICB.r-universe.dev/ui#package:TCGAgistic)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8115633.svg)](https://doi.org/10.5281/zenodo.8115633)
 <!-- badges: end -->
 
 The goal of TCGAgistic is to easily load gistic copy-number analysis for
